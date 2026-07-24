@@ -31,4 +31,4 @@ In the repository, open **Settings → Pages**, choose **Deploy from a branch**,
 
 The form uses FormSubmit. The first test submission may send an activation email to `m.alqaddi@myyahoo.com`; confirm it once so future inquiries are delivered.
 
-- Reduced oversized headings and combined the Hariri homepage screenshot with a small logo overlay.
+- Strongly reduced the oversized typography, added cache-busting asset versions, and aligned the Hariri website screenshot with a small circular logo beside it.

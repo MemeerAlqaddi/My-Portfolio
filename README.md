@@ -30,3 +30,5 @@ In the repository, open **Settings → Pages**, choose **Deploy from a branch**,
 ## Contact form
 
 The form uses FormSubmit. The first test submission may send an activation email to `m.alqaddi@myyahoo.com`; confirm it once so future inquiries are delivered.
+
+- Reduced oversized headings and combined the Hariri homepage screenshot with a small logo overlay.

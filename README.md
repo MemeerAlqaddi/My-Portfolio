@@ -1,25 +1,34 @@
 # Merwa Alqaddi — Portfolio
 
-A responsive portfolio highlighting end-to-end digital product work across web development, UI/UX, branding, integrations, and marketing.
+A responsive portfolio highlighting end-to-end work across web development, digital products, UI/UX, branding, integrations, social media, and advertising.
 
-## Featured projects
+## What changed in this version
 
-- **Al Majlis** — Installable Islamic game-night PWA
-- **Hariri Detailing** — Brand identity, business website, Calendly integration, social media, and advertising
-- **Car Parts Shop** — Responsive multi-page storefront concept
+The illustrated placeholders were replaced with real project material:
 
-## Run locally
+- **Al Majlis:** an embedded live application preview plus a current screenshot generated from the deployed GitHub Pages site.
+- **Hariri Detailing:** a current screenshot of the live business website plus the real hero and service images stored in the HaririDetailing repository.
+- **Car Parts Shop:** a current screenshot of the deployed GitHub Pages website.
 
-Open `index.html` in a browser.
+The screenshot thumbnails are generated from the live URLs through WordPress mShots. Because they are live snapshots, the first load may briefly take a moment while the image is generated and cached.
 
-## Deploy to GitHub Pages
+## Upload to GitHub
 
-1. Upload the contents of this folder to the `My-Website` repository.
-2. Open repository **Settings → Pages**.
-3. Choose **Deploy from a branch**.
-4. Select the `main` branch and `/ (root)`.
+Upload these files directly to the root of the `My-Portfolio` repository:
+
+- `index.html`
+- `style.css`
+- `script.js`
+- `README.md`
+
+Replace the existing versions when GitHub asks.
+
+## GitHub Pages
+
+In the repository:
+
+1. Open **Settings**.
+2. Select **Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Select `main` and `/ (root)`.
 5. Save.
-
-## Customize
-
-Edit project copy and links in `index.html`. Visual styling is in `style.css`.

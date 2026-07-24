@@ -44,3 +44,12 @@ The previous Al Majlis preview was replaced with three local screenshots reflect
 - Gameplay
 
 All three images are bundled in the `assets` folder and use contained, centered sizing without external screenshot services or image cropping.
+
+
+## Al Majlis ratio correction
+
+The Al Majlis portfolio card now shows only two screens:
+- Home screen
+- Choose a Game screen in light mode
+
+Both are shown at the correct portrait ratio instead of being scaled too large inside the project card.

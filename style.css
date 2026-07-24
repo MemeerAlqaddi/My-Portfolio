@@ -13,37 +13,27 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helveti
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button,input,textarea{font:inherit}
+button,a,input,textarea{outline-offset:4px}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #087d86}
+.skip-link{position:fixed;z-index:100;top:-100px;left:12px;padding:10px 14px;background:#111;color:#fff}
+.skip-link:focus{top:12px}
 .section{width:min(calc(100% - 48px),var(--max));margin-inline:auto;padding:110px 0}
 .section-label{margin:0 0 18px;color:#77736b;font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
-.site-nav{
-  position:fixed;z-index:50;top:0;left:0;right:0;height:76px;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 max(24px,calc((100vw - var(--max))/2));
-  background:rgba(248,249,250,.88);border-bottom:1px solid rgba(22,22,22,.1);
-  backdrop-filter:blur(14px)
-}
+.site-nav{position:fixed;z-index:50;top:0;left:0;right:0;height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 max(24px,calc((100vw - var(--max))/2));background:rgba(248,249,250,.9);border-bottom:1px solid rgba(22,22,22,.1);backdrop-filter:blur(14px)}
 .wordmark{font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;font-weight:700;letter-spacing:.04em}
 .site-nav nav{display:flex;align-items:center;gap:27px;font-size:.84rem}
 .site-nav nav a{transition:opacity .2s}.site-nav nav a:hover{opacity:.55}
 .resume-link{padding:8px 13px;border:1px solid var(--ink);border-radius:999px}
-.menu-button{display:none;border:0;background:transparent}
-.hero{
-  position:relative;min-height:100svh;
-  display:flex;align-items:center;
-  padding:125px max(24px,calc((100vw - var(--max))/2)) 90px;
-  background:
-    linear-gradient(90deg,rgba(248,249,250,.15) 0%,rgba(248,249,250,.42) 40%,rgba(248,249,250,.08) 100%),
-    url("https://raw.githubusercontent.com/MemeerAlqaddi/My-Website/main/images/zen-garden-sand-and-rocks-wallpaper-5120x2160_16.jpg") center/cover no-repeat;
-  -webkit-mask-image:linear-gradient(to bottom,#000 83%,transparent 100%);
-  mask-image:linear-gradient(to bottom,#000 83%,transparent 100%)
-}
-.hero-copy{max-width:720px;padding:65px 0 80px}
+.menu-button{display:none;border:0;background:transparent;color:var(--ink);cursor:pointer}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:125px max(24px,calc((100vw - var(--max))/2)) 90px;background-color:#f2f2f1;background-image:linear-gradient(90deg,rgba(248,249,250,.1) 0%,rgba(248,249,250,.48) 42%,rgba(248,249,250,.1) 100%),radial-gradient(circle at 72% 46%,rgba(128,139,139,.14),transparent 36%),url("https://raw.githubusercontent.com/MemeerAlqaddi/My-Website/main/images/zen-garden-sand-and-rocks-wallpaper-5120x2160_16.jpg");background-position:center;background-size:cover;background-repeat:no-repeat;-webkit-mask-image:linear-gradient(to bottom,#000 83%,transparent 100%);mask-image:linear-gradient(to bottom,#000 83%,transparent 100%)}
+.hero-copy{max-width:730px;padding:65px 0 80px}
 .overline{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
 .hero h1{margin:25px 0;font:500 clamp(4.4rem,10vw,9.2rem)/.8 Georgia,"Times New Roman",serif;letter-spacing:-.06em}
-.hero-lead{max-width:590px;font-size:1.18rem;color:#393936}
-.hero-actions,.project-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:30px}
+.hero-lead{max-width:620px;font-size:1.18rem;color:#393936}
+.hero-contact{margin-top:26px}
 .button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:11px 19px;border:1px solid var(--ink);border-radius:2px;font-size:.84rem;font-weight:700;cursor:pointer}
 .button.dark{background:var(--ink);color:#fff}
+.button.dark:hover{background:#333}
 .text-link{display:inline-block;border-bottom:1px solid currentColor;padding-bottom:3px;font-size:.88rem;font-weight:700}
 .intro{border-bottom:1px solid var(--line)}
 .intro-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:90px;align-items:start}
@@ -53,32 +43,35 @@ button,input,textarea{font:inherit}
 .section-heading>p{max-width:360px;color:var(--muted)}
 .project-card{display:grid;grid-template-columns:1.08fr .92fr;gap:58px;align-items:center;padding:0 0 95px;margin-bottom:95px;border-bottom:1px solid var(--line)}
 .project-card.reverse{grid-template-columns:.92fr 1.08fr}.project-card.reverse .project-media{order:2}
-.project-media{
-  position:relative;display:grid;place-items:center;
-  min-width:0;aspect-ratio:16/11;overflow:hidden;
-  background:#e7e6e2;border:1px solid rgba(22,22,22,.12)
-}
+.project-media{position:relative;display:grid;place-items:center;min-width:0;aspect-ratio:16/11;overflow:hidden;background:#e7e6e2;border:1px solid rgba(22,22,22,.12)}
 .project-media>img{width:100%;height:100%;object-fit:contain;object-position:center}
-.project-media-dark{background:#071013}.project-media-dark>img{object-fit:cover}
-.hariri-media{background:#08080a;padding:22px}.hariri-media>img{object-fit:contain}
-.project-logo{
-  position:absolute;right:28px;bottom:28px;width:150px;min-height:84px;
-  display:grid;place-items:center;padding:12px;background:rgba(4,4,5,.88);
-  border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px)
-}
-.project-logo img{max-height:64px;object-fit:contain}
-.parts-media{background:#111}.parts-media>img{object-fit:contain;padding:18px}
-.media-title{position:absolute;left:25px;bottom:25px;padding:16px 19px;background:rgba(17,17,17,.88);color:#fff}
-.media-title span{display:block;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:#bebdb8}
-.media-title strong{display:block;margin-top:4px;font:500 1.5rem Georgia,serif}
+.project-media-dark{background:#071013}
 .project-topline{display:flex;justify-content:space-between;gap:18px;color:#77736b;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
 .project-copy h3{margin:28px 0 20px;font:500 clamp(2.5rem,5vw,4.8rem)/.96 Georgia,"Times New Roman",serif}
 .project-copy>p{color:var(--muted);font-size:1.02rem}
 .project-services{display:flex;flex-wrap:wrap;gap:7px;margin-top:25px}
 .project-services span{padding:6px 9px;border:1px solid var(--line);border-radius:999px;font-size:.72rem}
+.project-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:30px}
+.al-majlis-media{aspect-ratio:auto;min-height:570px;padding:30px;background:radial-gradient(circle at 75% 10%,rgba(59,137,144,.18),transparent 30%),#101719}
+.al-majlis-gallery{width:100%;height:100%;display:flex;align-items:flex-start;justify-content:center;gap:28px}
+.screen-shot{margin:0;width:min(46%,280px);flex:0 1 280px;text-align:center}
+.screen-shot a{display:block}
+.screen-shot img{width:100%;height:auto;object-fit:contain;border-radius:2px;filter:drop-shadow(0 22px 30px rgba(0,0,0,.38));transition:transform .25s ease}
+.screen-shot a:hover img,.hariri-gallery a:hover img{transform:translateY(-3px)}
+.screen-shot figcaption,.hariri-gallery figcaption{margin-top:10px;color:#dfe7e8;font-size:.74rem;letter-spacing:.04em;text-align:center}
+.hariri-media{aspect-ratio:auto;min-height:440px;padding:22px;display:block;overflow:hidden;background:#060609}
+.hariri-gallery{width:100%;height:100%;display:grid;grid-template-columns:minmax(0,2.35fr) minmax(180px,.65fr);align-items:center;gap:20px}
+.hariri-gallery figure{margin:0;min-width:0}
+.hariri-gallery a{display:block}
+.hariri-gallery img{width:100%;height:auto;object-fit:contain;border:1px solid rgba(255,255,255,.1);box-shadow:0 18px 35px rgba(0,0,0,.34);transition:transform .25s ease}
+.hariri-site-shot img{aspect-ratio:2048/1070}.hariri-logo-shot img{aspect-ratio:542/544}
+.parts-media{background:#111}.parts-media>img{object-fit:contain;padding:18px}
+.media-title{position:absolute;left:25px;bottom:25px;padding:16px 19px;background:rgba(17,17,17,.88);color:#fff}
+.media-title span{display:block;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:#bebdb8}
+.media-title strong{display:block;margin-top:4px;font:500 1.5rem Georgia,serif}
 .profile{display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;gap:100px;border-top:1px solid var(--line)}
 .profile-image-wrap{display:grid;place-items:center}
-.profile-image-wrap img{width:310px;height:310px;object-fit:cover;border-radius:50%;border:7px solid #131313}
+.profile-image-wrap img{width:310px;height:310px;object-fit:cover;border-radius:50%;border:7px solid #131313;background:#ddd}
 .profile-copy p{color:var(--muted);font-size:1.04rem}
 .skills{border-top:1px solid var(--line)}
 .skill-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
@@ -90,11 +83,7 @@ button,input,textarea{font:inherit}
 .timeline article:last-child{border-bottom:1px solid var(--line)}
 .timeline time,.timeline article>p,.timeline div p{color:var(--muted);font-size:.9rem}
 .timeline h3{margin:0;font:500 1.25rem Georgia,serif}.timeline div p{margin:4px 0}
-.credentials{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:45px;
-  padding:70px max(24px,calc((100vw - var(--max))/2));
-  background:var(--warm);color:#222
-}
+.credentials{display:grid;grid-template-columns:repeat(3,1fr);gap:45px;padding:70px max(24px,calc((100vw - var(--max))/2));background:var(--warm);color:#222}
 .credentials h3{margin:7px 0 5px;font:500 1.6rem Georgia,serif}.credentials p{margin:0;color:#57544e}
 .contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:95px;align-items:center}
 .contact-form-wrap form{padding:36px;background:#fff;border:1px solid var(--line);box-shadow:0 15px 45px rgba(22,22,22,.08)}
@@ -103,11 +92,10 @@ label{display:block;margin:16px 0 0;font-size:.78rem;font-weight:700}
 input,textarea{width:100%;margin-top:7px;padding:12px;border:1px solid #c9c6bf;background:#fbfbfa}
 textarea{resize:vertical}.contact-form-wrap button{margin-top:20px}
 .contact-copy>p{color:var(--muted);font-size:1.05rem}
-.contact-copy>a{display:inline-block;margin-top:15px;font-size:1.3rem;border-bottom:1px solid}
+.contact-copy>a{display:inline-block;margin-top:15px;font-size:1.3rem;border-bottom:1px solid;overflow-wrap:anywhere}
 .social-links{display:flex;gap:22px;margin-top:35px;font-size:.9rem}
 footer{display:flex;justify-content:space-between;padding:30px max(24px,calc((100vw - var(--max))/2));background:var(--warm);border-top:1px solid rgba(22,22,22,.14);font-size:.8rem}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
-
 @media(max-width:900px){
   .menu-button{display:block}
   .site-nav nav{display:none;position:absolute;top:76px;left:0;right:0;padding:23px;background:rgba(248,249,250,.98);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}
@@ -116,6 +104,9 @@ footer{display:flex;justify-content:space-between;padding:30px max(24px,calc((10
   .intro-grid,.profile,.contact{grid-template-columns:1fr;gap:45px}
   .project-card,.project-card.reverse{grid-template-columns:1fr;gap:35px}
   .project-card.reverse .project-media{order:0}
+  .al-majlis-media{min-height:510px;padding:22px 16px}
+  .screen-shot{width:min(46%,230px);flex-basis:230px}
+  .hariri-gallery{grid-template-columns:minmax(0,2fr) minmax(135px,.7fr);gap:14px}
   .skill-grid{grid-template-columns:repeat(2,1fr)}
   .timeline article{grid-template-columns:120px 1fr}.timeline article>p{grid-column:2}
   .credentials{grid-template-columns:1fr}
@@ -129,124 +120,17 @@ footer{display:flex;justify-content:space-between;padding:30px max(24px,calc((10
   .section-heading{align-items:flex-start;flex-direction:column;margin-bottom:42px}
   .project-card{padding-bottom:68px;margin-bottom:68px}
   .project-media{aspect-ratio:4/3}
-  .project-logo{right:14px;bottom:14px;width:110px}
+  .al-majlis-media{aspect-ratio:auto;min-height:0;padding:14px}
+  .al-majlis-gallery{gap:10px}
+  .screen-shot{width:calc(50% - 5px);flex:0 1 calc(50% - 5px)}
+  .screen-shot figcaption{font-size:.66rem}
+  .hariri-media{aspect-ratio:auto;min-height:0;padding:12px}
+  .hariri-gallery{grid-template-columns:1fr;gap:16px}
+  .hariri-logo-shot{width:min(62%,240px);justify-self:center}
   .profile-image-wrap img{width:230px;height:230px}
   .skill-grid{grid-template-columns:1fr}
   .timeline article{grid-template-columns:1fr;gap:7px}.timeline article>p{grid-column:1}
   .contact-form-wrap form{padding:24px}
-  .contact-copy>a{font-size:1rem;overflow-wrap:anywhere}
+  .contact-copy>a{font-size:1rem}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
-
-/* Updated Al Majlis project screenshots */
-.almajlis-media{
-  aspect-ratio:auto;
-  min-height:470px;
-  padding:28px 22px;
-  background:
-    radial-gradient(circle at 75% 10%,rgba(59,137,144,.18),transparent 30%),
-    #101719;
-}
-.almajlis-gallery.two-screen-layout{
-  width:100%;
-  height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:24px;
-  flex-wrap:nowrap;
-}
-.almajlis-gallery .screen-shot{
-  margin:0;
-  width:min(100%, 210px);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:10px;
-}
-.almajlis-gallery .screen-shot img{
-  display:block;
-  width:100%;
-  height:auto;
-  aspect-ratio:390 / 844;
-  object-fit:contain;
-  object-position:center;
-  filter:drop-shadow(0 18px 24px rgba(0,0,0,.32));
-}
-.almajlis-gallery .screen-shot figcaption{
-  color:#dfe7e8;
-  font-size:.76rem;
-  letter-spacing:.03em;
-  text-align:center;
-}
-@media(max-width:900px){
-  .almajlis-media{
-    min-height:430px;
-    padding:20px 16px;
-  }
-  .almajlis-gallery.two-screen-layout{
-    gap:16px;
-  }
-  .almajlis-gallery .screen-shot{
-    width:min(100%, 180px);
-  }
-}
-@media(max-width:580px){
-  .almajlis-media{
-    min-height:0;
-    padding:12px;
-    overflow-x:auto;
-  }
-  .almajlis-gallery.two-screen-layout{
-    justify-content:flex-start;
-    gap:12px;
-    width:max-content;
-    min-width:100%;
-  }
-  .almajlis-gallery .screen-shot{
-    width:145px;
-    flex:0 0 145px;
-  }
-  .almajlis-gallery .screen-shot figcaption{
-    font-size:.7rem;
-  }
-}
-
-
-/* Hariri Detailing custom screenshot and logo update */
-.hariri-media{
-  background:#060609;
-  padding:18px;
-}
-.hariri-media > img{
-  object-fit:cover;
-  object-position:center top;
-  border:1px solid rgba(255,255,255,.08);
-}
-.hariri-media .project-logo{
-  right:18px;
-  bottom:18px;
-  width:132px;
-  min-height:0;
-  padding:0;
-  background:transparent;
-  border:none;
-  box-shadow:0 10px 24px rgba(0,0,0,.28);
-  backdrop-filter:none;
-}
-.hariri-media .project-logo img{
-  width:100%;
-  max-height:none;
-  height:auto;
-  object-fit:contain;
-}
-@media(max-width:900px){
-  .hariri-media{
-    padding:12px;
-  }
-  .hariri-media .project-logo{
-    width:110px;
-    right:12px;
-    bottom:12px;
-  }
-}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.screen-shot img,.hariri-gallery img{transition:none}}

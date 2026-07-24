@@ -33,3 +33,14 @@ Replace the current portfolio files. Do not upload this into `My-Website` unless
 The Al Majlis preview is bundled locally in `assets/almajlis-preview.png`.
 
 The original My-Website background/profile images and Hariri/Car Parts project assets are loaded directly from their existing public GitHub repositories so the portfolio uses the actual project work without unreliable live screenshot services.
+
+
+## Latest Al Majlis update
+
+The previous Al Majlis preview was replaced with three local screenshots reflecting the newer light-marble and blue-accent design:
+
+- Home
+- Choose a Game
+- Gameplay
+
+All three images are bundled in the `assets` folder and use contained, centered sizing without external screenshot services or image cropping.

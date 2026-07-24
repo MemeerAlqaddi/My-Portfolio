@@ -137,3 +137,52 @@ footer{display:flex;justify-content:space-between;padding:30px max(24px,calc((10
   .contact-copy>a{font-size:1rem;overflow-wrap:anywhere}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+
+/* Updated Al Majlis project screenshots */
+.almajlis-media{
+  aspect-ratio:16/11;
+  padding:22px;
+  background:
+    radial-gradient(circle at 75% 10%,rgba(59,137,144,.18),transparent 30%),
+    #101719;
+}
+.almajlis-gallery{
+  width:100%;
+  height:100%;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:center;
+  justify-items:center;
+  gap:16px;
+}
+.almajlis-gallery img{
+  width:100%;
+  height:100%;
+  max-height:100%;
+  object-fit:contain;
+  object-position:center;
+  filter:drop-shadow(0 18px 24px rgba(0,0,0,.32));
+}
+@media(max-width:900px){
+  .almajlis-media{aspect-ratio:16/10}
+}
+@media(max-width:580px){
+  .almajlis-media{
+    aspect-ratio:auto;
+    min-height:390px;
+    padding:12px;
+    overflow-x:auto;
+  }
+  .almajlis-gallery{
+    width:max-content;
+    min-width:100%;
+    height:365px;
+    grid-template-columns:repeat(3,165px);
+    justify-content:start;
+    gap:10px;
+  }
+  .almajlis-gallery img{
+    width:165px;
+    height:357px;
+  }
+}

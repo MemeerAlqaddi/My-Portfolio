@@ -211,3 +211,42 @@ footer{display:flex;justify-content:space-between;padding:30px max(24px,calc((10
     font-size:.7rem;
   }
 }
+
+
+/* Hariri Detailing custom screenshot and logo update */
+.hariri-media{
+  background:#060609;
+  padding:18px;
+}
+.hariri-media > img{
+  object-fit:cover;
+  object-position:center top;
+  border:1px solid rgba(255,255,255,.08);
+}
+.hariri-media .project-logo{
+  right:18px;
+  bottom:18px;
+  width:132px;
+  min-height:0;
+  padding:0;
+  background:transparent;
+  border:none;
+  box-shadow:0 10px 24px rgba(0,0,0,.28);
+  backdrop-filter:none;
+}
+.hariri-media .project-logo img{
+  width:100%;
+  max-height:none;
+  height:auto;
+  object-fit:contain;
+}
+@media(max-width:900px){
+  .hariri-media{
+    padding:12px;
+  }
+  .hariri-media .project-logo{
+    width:110px;
+    right:12px;
+    bottom:12px;
+  }
+}

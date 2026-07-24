@@ -53,3 +53,10 @@ The Al Majlis portfolio card now shows only two screens:
 - Choose a Game screen in light mode
 
 Both are shown at the correct portrait ratio instead of being scaled too large inside the project card.
+
+
+## Latest update
+- Replaced the Hariri Detailing project image with the user-provided website screenshot.
+- Replaced the Hariri Detailing corner logo with the user-provided brand logo.
+
+- Replaced the Al Majlis portfolio screenshots with the two user-provided app screenshots.

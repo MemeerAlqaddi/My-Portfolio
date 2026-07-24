@@ -1,34 +1,35 @@
 # Merwa Alqaddi — Portfolio
 
-A responsive portfolio highlighting end-to-end work across web development, digital products, UI/UX, branding, integrations, social media, and advertising.
+This version keeps the visual direction of the original **My-Website** project:
 
-## What changed in this version
+- Full-screen zen-garden hero
+- Neutral white, black, gray, and warm beige palette
+- Georgia serif headings
+- Circular profile presentation
+- Simple, calm spacing and contact layout
 
-The illustrated placeholders were replaced with real project material:
+It adds the stronger portfolio content:
 
-- **Al Majlis:** an embedded live application preview plus a current screenshot generated from the deployed GitHub Pages site.
-- **Hariri Detailing:** a current screenshot of the live business website plus the real hero and service images stored in the HaririDetailing repository.
-- **Car Parts Shop:** a current screenshot of the deployed GitHub Pages website.
+- Al Majlis product case study
+- Hariri Detailing brand, website, booking, social media, and advertising work
+- Car Parts Shop web project
+- Capabilities, experience, education, and certifications
+- Responsive navigation and layout
+- Working contact form through FormSubmit
 
-The screenshot thumbnails are generated from the live URLs through WordPress mShots. Because they are live snapshots, the first load may briefly take a moment while the image is generated and cached.
+## Upload
 
-## Upload to GitHub
-
-Upload these files directly to the root of the `My-Portfolio` repository:
+Upload everything in this folder to the root of `My-Portfolio`:
 
 - `index.html`
 - `style.css`
 - `script.js`
-- `README.md`
+- `assets/`
 
-Replace the existing versions when GitHub asks.
+Replace the current portfolio files. Do not upload this into `My-Website` unless you intentionally want to replace that site.
 
-## GitHub Pages
+## Images
 
-In the repository:
+The Al Majlis preview is bundled locally in `assets/almajlis-preview.png`.
 
-1. Open **Settings**.
-2. Select **Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select `main` and `/ (root)`.
-5. Save.
+The original My-Website background/profile images and Hariri/Car Parts project assets are loaded directly from their existing public GitHub repositories so the portfolio uses the actual project work without unreliable live screenshot services.

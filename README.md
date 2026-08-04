@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Merwa Alqaddi — web developer and digital product designer. Portfolio of web development, branding, integrations, social media, and digital product work.">
+  <title>Merwa Alqaddi | Web Development & Digital Products</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-nav">
+    <a class="wordmark" href="#home">AlQaddi</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav id="nav-links" aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a class="resume-link" href="https://memeeralqaddi.github.io/My-Resume/" target="_blank" rel="noreferrer">Resume ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="overline">Web Development · Product Design · Digital Brand Strategy</p>
+        <h1>Merwa<br>Alqaddi</h1>
+        <p class="hero-lead">I design and build complete digital experiences—from visual identity and user interface to development, integrations, launch, and marketing.</p>
+        <div class="hero-actions">
+          <a class="button dark" href="#work">View selected work</a>
+          <a class="text-link" href="mailto:m.alqaddi@myyahoo.com">Get in touch →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro section">
+      <div class="section-label">What I do</div>
+      <div class="intro-grid">
+        <h2>Digital products with a clear purpose and a polished finish.</h2>
+        <p>My work brings together software development, UI/UX, branding, business strategy, social media, and advertising. I focus on the entire experience rather than treating design, code, and business goals as separate pieces.</p>
+      </div>
+    </section>
+
+    <section class="work section" id="work">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Selected work</p>
+          <h2>Projects built from concept to launch.</h2>
+        </div>
+        <p>Real products, business websites, brand systems, and integrations.</p>
+      </div>
+
+      <article class="project-card">
+        <div class="project-media project-media-dark">
+          <img src="assets/almajlis-preview.png" alt="Al Majlis application welcome and game selection screens">
+        </div>
+        <div class="project-copy">
+          <div class="project-topline"><span>01</span><span>Digital product · PWA</span></div>
+          <h3>Al Majlis</h3>
+          <p>An installable Islamic game-night application that combines competitive knowledge games with meaningful conversation modes. I developed the product structure, interface, game flow, scoring, settings, source reporting, audio controls, responsive behavior, and automated tests.</p>
+          <div class="project-services">
+            <span>Product strategy</span><span>UI/UX design</span><span>JavaScript</span><span>PWA</span><span>Game logic</span><span>Testing</span>
+          </div>
+          <div class="project-actions">
+            <a class="button dark" href="https://memeeralqaddi.github.io/AlMajlis/" target="_blank" rel="noreferrer">Open live app ↗</a>
+            <a class="text-link" href="https://github.com/MemeerAlqaddi/AlMajlis" target="_blank" rel="noreferrer">View source →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reverse">
+        <div class="project-media hariri-media">
+          <img src="https://raw.githubusercontent.com/MemeerAlqaddi/HaririDetailing/main/assets/hero.png" alt="Hariri Detailing website hero and brand artwork">
+          <div class="project-logo">
+            <img src="https://raw.githubusercontent.com/MemeerAlqaddi/HaririDetailing/main/assets/logo.png" alt="Hariri Detailing logo">
+          </div>
+        </div>
+        <div class="project-copy">
+          <div class="project-topline"><span>02</span><span>Client brand · Service website</span></div>
+          <h3>Hariri Detailing</h3>
+          <p>A complete business identity and web presence developed from the ground up. The project includes brand direction, logo design, responsive website design and development, service architecture, conversion-focused copy, Calendly booking, social media content, and advertising creative.</p>
+          <div class="project-services">
+            <span>Brand identity</span><span>Logo design</span><span>Web development</span><span>Calendly</span><span>Social media</span><span>Advertising</span>
+          </div>
+          <div class="project-actions">
+            <a class="button dark" href="https://hariridetailing.com/" target="_blank" rel="noreferrer">Visit website ↗</a>
+            <a class="text-link" href="https://github.com/MemeerAlqaddi/HaririDetailing" target="_blank" rel="noreferrer">View source →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media parts-media">
+          <img src="https://raw.githubusercontent.com/MemeerAlqaddi/Car-Parts/main/main.jpg" alt="Automotive imagery from the Car Parts Shop project">
+          <div class="media-title"><span>Responsive storefront concept</span><strong>Car Parts Shop</strong></div>
+        </div>
+        <div class="project-copy">
+          <div class="project-topline"><span>03</span><span>Multi-page web concept</span></div>
+          <h3>Car Parts Shop</h3>
+          <p>A responsive multi-page storefront concept for browsing new and used automotive parts. I organized the website around clear vehicle and inventory navigation, created the visual presentation, and implemented the responsive pages with Bootstrap.</p>
+          <div class="project-services">
+            <span>HTML</span><span>CSS</span><span>Bootstrap</span><span>Responsive design</span><span>Information architecture</span>
+          </div>
+          <div class="project-actions">
+            <a class="button dark" href="https://memeeralqaddi.github.io/Car-Parts/" target="_blank" rel="noreferrer">Visit website ↗</a>
+            <a class="text-link" href="https://github.com/MemeerAlqaddi/Car-Parts" target="_blank" rel="noreferrer">View source →</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="profile section" id="about">
+      <div class="profile-image-wrap">
+        <img src="https://raw.githubusercontent.com/MemeerAlqaddi/My-Website/main/images/Snapchat-1263686572.jpg" alt="Portrait of Merwa Alqaddi">
+      </div>
+      <div class="profile-copy">
+        <p class="section-label">About me</p>
+        <h2>Technical execution shaped by an understanding of people.</h2>
+        <p>My background spans technology, human resources, recruiting, and client-facing sales. It taught me to look beyond the interface and understand the user, the business, and the decisions that make a product useful.</p>
+        <p>I am strongest when I can take ownership from the initial idea through design, development, refinement, integration, and launch.</p>
+        <a class="text-link" href="https://memeeralqaddi.github.io/My-Resume/" target="_blank" rel="noreferrer">View my resume →</a>
+      </div>
+    </section>
+
+    <section class="skills section" id="skills">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Capabilities</p>
+          <h2>Built across disciplines.</h2>
+        </div>
+      </div>
+      <div class="skill-grid">
+        <article><span>01</span><h3>Development</h3><p>HTML, CSS, JavaScript, TypeScript, Bootstrap, React, Node.js, Express, REST APIs, responsive development, Git, and GitHub.</p></article>
+        <article><span>02</span><h3>Product & UI/UX</h3><p>Product structure, interface design, user flows, responsive layouts, information architecture, usability refinement, and testing.</p></article>
+        <article><span>03</span><h3>Brand & Creative</h3><p>Brand identity, logo design, typography, color systems, social media creative, ad design, and visual consistency.</p></article>
+        <article><span>04</span><h3>Business & Integration</h3><p>Booking systems, forms, email workflows, SEO foundations, service positioning, client discovery, CRM, and digital marketing.</p></article>
+      </div>
+    </section>
+
+    <section class="experience section" id="experience">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Experience</p>
+          <h2>A multidisciplinary path.</h2>
+        </div>
+      </div>
+      <div class="timeline">
+        <article>
+          <time>2025 — Present</time>
+          <div><h3>Web Developer</h3><p>Freelance / Upwork · Remote</p></div>
+          <p>Designing and developing responsive websites and digital products, integrating business tools, and creating cohesive brand and marketing assets.</p>
+        </article>
+        <article>
+          <time>2023 — 2024</time>
+          <div><h3>HR Director</h3><p>HealthSync Solutions · Racine, WI</p></div>
+          <p>Led recruitment and onboarding processes, maintained employee systems and records, supported leadership, and improved internal workflows.</p>
+        </article>
+        <article>
+          <time>2022 — 2023</time>
+          <div><h3>Lead Sales Advisor</h3><p>Best Buy · Pleasant Prairie, WI</p></div>
+          <p>Translated technical products into customer-focused solutions, trained team members, strengthened client relationships, and streamlined the sales process.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="credentials">
+      <div><p class="section-label">Education</p><h3>B.S. Computer Science</h3><p>University of Wisconsin–Parkside · In progress</p></div>
+      <div><p class="section-label">Certification</p><h3>AWS Solutions Architect</h3><p>Amazon Web Services</p></div>
+      <div><p class="section-label">Certification</p><h3>Full-Stack Web Development</h3><p>Professional training</p></div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="contact-form-wrap">
+        <form action="https://formsubmit.co/m.alqaddi@myyahoo.com" method="POST">
+          <input type="hidden" name="_subject" value="New portfolio inquiry">
+          <input type="hidden" name="_captcha" value="false">
+          <p class="section-label">Get in touch</p>
+          <h2>Tell me what you are building.</h2>
+          <label>Name<input type="text" name="name" autocomplete="name" required></label>
+          <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          <label>Message<textarea name="message" rows="5" required></textarea></label>
+          <button class="button dark" type="submit">Send inquiry</button>
+        </form>
+      </div>
+      <div class="contact-copy">
+        <p class="section-label">Contact</p>
+        <h2>Every strong project starts with a clear conversation.</h2>
+        <p>Available for web development, digital product, UI/UX, branding, and related opportunities.</p>
+        <a href="mailto:m.alqaddi@myyahoo.com">m.alqaddi@myyahoo.com</a>
+        <div class="social-links">
+          <a href="https://github.com/MemeerAlqaddi" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/merwa-alqaddi-955206211" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Merwa Alqaddi</span>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+</body>
+</html>

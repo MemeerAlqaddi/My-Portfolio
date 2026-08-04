@@ -1,35 +1,42 @@
-# Merwa Alqaddi — Portfolio
+const menuButton = document.querySelector(".menu-button");
+const nav = document.querySelector("#nav-links");
 
-This version keeps the visual direction of the original **My-Website** project:
+function closeMenu() {
+  nav?.classList.remove("open");
+  menuButton?.setAttribute("aria-expanded", "false");
+}
 
-- Full-screen zen-garden hero
-- Neutral white, black, gray, and warm beige palette
-- Georgia serif headings
-- Circular profile presentation
-- Simple, calm spacing and contact layout
+menuButton?.addEventListener("click", () => {
+  const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+  menuButton.setAttribute("aria-expanded", String(!isOpen));
+  nav?.classList.toggle("open", !isOpen);
+});
 
-It adds the stronger portfolio content:
+nav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeMenu();
+});
 
-- Al Majlis product case study
-- Hariri Detailing brand, website, booking, social media, and advertising work
-- Car Parts Shop web project
-- Capabilities, experience, education, and certifications
-- Responsive navigation and layout
-- Working contact form through FormSubmit
+document.querySelector("#year").textContent = new Date().getFullYear();
 
-## Upload
+const animatedElements = document.querySelectorAll(
+  ".project-card, .profile, .skill-grid article, .timeline article, .contact-form-wrap, .contact-copy"
+);
+animatedElements.forEach((element) => element.classList.add("reveal"));
 
-Upload everything in this folder to the root of `My-Portfolio`:
-
-- `index.html`
-- `style.css`
-- `script.js`
-- `assets/`
-
-Replace the current portfolio files. Do not upload this into `My-Website` unless you intentionally want to replace that site.
-
-## Images
-
-The Al Majlis preview is bundled locally in `assets/almajlis-preview.png`.
-
-The original My-Website background/profile images and Hariri/Car Parts project assets are loaded directly from their existing public GitHub repositories so the portfolio uses the actual project work without unreliable live screenshot services.
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+} else {
+  document.querySelectorAll(".reveal").forEach((element) => element.classList.add("visible"));
+}

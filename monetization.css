@@ -1,0 +1,200 @@
+/* Al Majlis premium overlay.
+   No background, theme, gameplay, countdown, sound, or navigation overrides. */
+
+.modeGroupList[data-majlis-premium-ready="true"] {
+  display: block;
+}
+
+.majlisTierHeading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0 9px;
+  color: var(--aqua-bright);
+  font-family: var(--display);
+  font-size: 12px;
+  letter-spacing: .06em;
+}
+
+.majlisTierHeading i {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, currentColor, transparent);
+  opacity: .34;
+}
+
+.majlisModeSection {
+  display: grid;
+  gap: 9px;
+}
+
+.majlisPremiumMode {
+  border-color: var(--aqua) !important;
+  padding-right: 46px !important;
+}
+
+.majlisPremiumMode.isUnlocked {
+  border-color: #4f8d78 !important;
+}
+
+.majlisModeLock {
+  position: absolute;
+  z-index: 3;
+  right: 15px;
+  top: 12px;
+  width: 17px;
+  height: 17px;
+  display: grid;
+  place-items: center;
+  color: var(--aqua-bright);
+  pointer-events: none;
+}
+
+.majlisModeLock svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.majlisPremiumMode.isUnlocked .majlisModeLock {
+  color: #68a98f;
+}
+
+.majlisBundleCard {
+  margin-top: 10px;
+  border-color: var(--aqua-bright) !important;
+}
+
+.majlisBundleCard:after {
+  content: "→" !important;
+}
+
+.majlisBundleMark {
+  position: absolute;
+  right: 17px;
+  top: 12px;
+  color: var(--aqua-bright);
+  font-size: 12px;
+}
+
+.majlisBundleCard.isUnlocked {
+  border-color: #4f8d78 !important;
+}
+
+.majlisPremiumSheet {
+  z-index: 9000 !important;
+}
+
+.majlisPremiumPanel {
+  width: min(92vw, 470px);
+  max-height: min(88dvh, 760px);
+  overflow: auto;
+  text-align: center;
+}
+
+.majlisPurchaseBenefits {
+  display: grid;
+  gap: 9px;
+  margin: 18px 0;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  text-align: left;
+}
+
+.majlisPurchaseBenefits span {
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.majlisPurchaseBenefits span:before {
+  content: "✓";
+  margin-right: 9px;
+  color: var(--aqua-bright);
+}
+
+.majlisPurchasePrimary,
+.majlisPurchaseSecondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(290px, 100%);
+  min-height: 48px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.majlisPurchaseSecondary {
+  margin-top: 9px;
+  border: 1px solid var(--aqua);
+}
+
+.majlisRestore {
+  min-height: 44px;
+  margin-top: 8px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 11px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.majlisCheckoutBack {
+  display: block;
+  margin: 0 0 14px;
+}
+
+.majlisCheckoutLoading {
+  padding: 22px 10px;
+  color: var(--muted);
+}
+
+#premiumCheckoutContainer {
+  min-height: 250px;
+  text-align: left;
+}
+
+.majlisStripeNote {
+  display: block;
+  margin-top: 13px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.majlisSuccessMark {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 15px;
+  border: 1px solid #68a98f;
+  border-radius: 50%;
+  color: #68a98f;
+  font-size: 25px;
+}
+
+@media (min-width: 600px) {
+  .majlisModeSection {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .majlisBundleCard {
+    width: 100%;
+  }
+}
+
+@media (max-height: 700px) {
+  .majlisTierHeading {
+    margin-top: 11px;
+  }
+
+  .majlisPremiumPanel {
+    max-height: 92dvh;
+  }
+}

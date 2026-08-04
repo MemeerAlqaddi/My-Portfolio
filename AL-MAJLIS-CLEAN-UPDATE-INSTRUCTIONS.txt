@@ -1,0 +1,95 @@
+AL MAJLIS — CLEAN PREMIUM + STRIPE + VERCEL UPDATE
+
+THIS PACKAGE WAS CHECKED AGAINST CURRENT GITHUB COMMIT:
+ca143b598074e0ec75a4b00b33d8bff72a3736d2
+
+THIS PACKAGE IS AN OVERLAY.
+It does not contain or replace the current app's index.html, app.js, styles.css,
+cards-data.js, upgrade-v44.js, sounds, icons, manifest, gameplay, countdown,
+reports, navigation, or existing light/dark marble backgrounds.
+
+ALLOWED VISUAL CHANGE
+Only the game-mode selection area is reorganized:
+• Included for Free
+• More Ways to Play
+• Small lock icon on paid modes
+• Subtle premium border using existing app color variables
+• Unlock All Premium Modes card
+• Purchase bottom sheet using existing app classes and theme variables
+
+FREE MODES
+• Guess The Word
+• Trivia
+• Riddles
+• Under The Surface
+
+PAID MODES
+• Game Night Shuffle — $3.99
+• Decode the Gibberish — $2.99
+• Complete the Ayah — $2.99
+• Conversation Shuffle — $3.99
+• Dilemmas — $2.99
+• Islam vs. Culture — $2.99
+• All Premium Modes — $7.99
+
+PAYMENT
+• Stripe Embedded Checkout opens inside the Al Majlis purchase sheet.
+• Normal card checkout stays inside the app.
+• The server verifies that the Checkout Session is complete and paid.
+• A paid mode unlocks only after successful verification.
+• Verified session IDs are rechecked when restoring purchases.
+• The Stripe secret key is never placed in GitHub or browser code.
+
+UPLOAD
+Upload every item from this ZIP into the ROOT of:
+MemeerAlqaddi/AlMajlis
+
+Keep these folders:
+• api
+• scripts
+
+Replace package.json when GitHub asks.
+Do not delete or replace any other current repository files.
+
+VERCEL
+1. Sign in at Vercel using GitHub.
+2. Add New > Project.
+3. Import MemeerAlqaddi/AlMajlis.
+4. Deploy.
+5. Open Project > Settings > Environment Variables.
+6. Add:
+   STRIPE_PUBLISHABLE_KEY = pk_test_...
+   STRIPE_SECRET_KEY = sk_test_...
+7. Apply them to Preview and Production while testing.
+8. Redeploy.
+
+STRIPE TEST PAYMENT
+Card: 4242 4242 4242 4242
+Expiration: any future date
+CVC: any three digits
+Postal code: any valid postal code
+
+GO LIVE
+After test purchases and access restoration work:
+• Activate Stripe.
+• Replace the test keys in Vercel with pk_live_... and sk_live_...
+• Redeploy Production.
+
+CURRENT RESTORE LIMITATION
+This release restores purchases in the same browser/device by re-verifying saved
+Stripe Checkout Session IDs. Cross-device restoration requires customer
+accounts and a database and is not advertised by this release.
+
+CURRENT GITHUB COMPATIBILITY CHECK
+• Current setup container: #setupModes
+• Current game-mode cards: .setupMode[data-mode]
+• Current mode groups: .modeGroup and .modeGroupList
+• Current modal system: .sheetBackdrop, .sheetPanel, openDialog and closeDialog
+• Current Islam vs Culture code loads through upgrade-v44.js before monetization.js
+• Current theme remains controlled exclusively by styles.css and existing variables
+• No custom marble, body, setup-screen, countdown, gameplay or dark/light rules
+  are included in monetization.css
+
+FINAL DEPLOYMENT SAFETY
+• Uses Stripe's REST API inside Vercel functions; no new npm dependency is added.
+• The existing package-lock.json remains compatible and should stay in GitHub.

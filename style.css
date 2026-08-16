@@ -178,3 +178,124 @@ footer{display:flex;justify-content:space-between;padding:30px max(24px,calc((10
   .contact-copy>a{font-size:1rem}
   footer{flex-direction:column;gap:8px}
 }
+
+
+/* Cleaner project presentation */
+.project-card{gap:72px}
+.project-media.clean-media{
+  background:transparent;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+  overflow:visible;
+  aspect-ratio:auto;
+}
+.majlis-clean-media{
+  min-height:auto;
+  padding:0;
+}
+.majlis-board{
+  display:flex;
+  gap:24px;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+.majlis-shot{
+  display:block;
+  width:min(46%,280px);
+}
+.majlis-shot img{
+  width:100%;
+  height:auto;
+  border-radius:12px;
+  box-shadow:0 18px 34px rgba(29,34,33,.16);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.majlis-shot:hover img{
+  transform:translateY(-3px);
+  box-shadow:0 22px 40px rgba(29,34,33,.19);
+}
+
+.hariri-clean-media{
+  min-height:auto;
+  padding:0;
+}
+.hariri-board{
+  position:relative;
+}
+.hariri-home-link{
+  display:block;
+}
+.hariri-home-link img{
+  width:100%;
+  height:auto;
+  border-radius:14px;
+  box-shadow:0 18px 34px rgba(29,34,33,.14);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.hariri-home-link:hover img{
+  transform:translateY(-3px);
+  box-shadow:0 22px 40px rgba(29,34,33,.18);
+}
+.hariri-logo-chip{
+  position:absolute;
+  right:18px;
+  bottom:18px;
+  width:88px;
+  height:88px;
+  border-radius:50%;
+  background:#fff;
+  display:grid;
+  place-items:center;
+  box-shadow:0 14px 30px rgba(29,34,33,.16);
+}
+.hariri-logo-chip img{
+  width:82%;
+  height:82%;
+  object-fit:cover;
+  border-radius:50%;
+}
+
+.project-services{
+  gap:14px;
+}
+.project-services span{
+  padding:0;
+  border-bottom:1px solid rgba(128,139,139,.34);
+  font-size:.73rem;
+  letter-spacing:.01em;
+}
+
+.project-copy > p,
+.profile-copy p,
+.capabilities-list p,
+.timeline div p,
+.timeline article>p,
+.contact-copy>p{
+  max-width:62ch;
+}
+
+.contact-languages{
+  margin:22px 0 0;
+  color:var(--muted);
+  font-size:.92rem;
+  line-height:1.7;
+}
+
+@media(max-width:900px){
+  .project-card{gap:34px}
+}
+@media(max-width:580px){
+  .majlis-board{
+    gap:12px;
+  }
+  .majlis-shot{
+    width:calc(50% - 6px);
+  }
+  .hariri-logo-chip{
+    width:64px;
+    height:64px;
+    right:12px;
+    bottom:12px;
+  }
+}

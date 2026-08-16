@@ -14,8 +14,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=20260816-2">
-  <script defer src="script.js?v=20260816-2"></script>
+  <link rel="stylesheet" href="style.css?v=20260816-3">
+  <script defer src="script.js?v=20260816-3"></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -24,11 +24,11 @@
     <a class="wordmark" href="#home" aria-label="Merwa AlQaddi home">AlQaddi</a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
     <nav id="nav-links" aria-label="Primary navigation">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
+      <a href="#work" data-section="work">Work</a>
+      <a href="#about" data-section="about">About</a>
+      <a href="#skills" data-section="skills">Skills</a>
+      <a href="#experience" data-section="experience">Experience</a>
+      <a href="#contact" data-section="contact">Contact</a>
       <a class="resume-link" href="https://memeeralqaddi.github.io/My-Resume/" target="_blank" rel="noopener noreferrer">Resume ↗</a>
     </nav>
   </header>
@@ -46,21 +46,19 @@
       </div>
     </section>
 
-    <section class="intro section" aria-labelledby="intro-title">
-      <p class="section-label">What I do</p>
-      <div class="intro-grid">
-        <h2 id="intro-title">The hardest problems usually live between disciplines.</h2>
-        <p>Design, development, operations, and strategy are often treated as separate handoffs. I work across those boundaries so the experience feels coherent from the first user decision to the systems supporting it. The goal is not more layers. It is fewer gaps.</p>
+    <section class="transition-strip" aria-label="Approach">
+      <div class="transition-inner">
+        <p class="section-label">What I do</p>
+        <p class="transition-statement">I work across design, development, systems, and strategy so the experience feels coherent from the first user decision to the infrastructure supporting it.</p>
       </div>
     </section>
 
-    <section class="work section" id="work" aria-labelledby="work-title">
+<section class="work section" id="work" aria-labelledby="work-title">
       <div class="section-heading">
         <div>
           <p class="section-label">Selected work</p>
-          <h2 id="work-title">Work that moved beyond the mockup.</h2>
+          <h2 id="work-title">Built from the idea outward.</h2>
         </div>
-        <p>Products and business systems built from the idea outward - structure, experience, implementation, and refinement.</p>
       </div>
 
       <article class="project-card">
@@ -83,9 +81,9 @@
         <div class="project-copy">
           <div class="project-topline"><span>01</span><span>Digital product · PWA</span></div>
           <h3>Al Majlis</h3>
-          <p>I took Al Majlis from a cultural game-night concept to a functioning mobile-first application. I shaped the product structure, competitive and conversational flows, scoring, timers, multilingual content, audio behavior, responsive states, reporting, and QA around the actual pace of group play.</p>
+          <p>I took Al Majlis from a cultural game-night concept to a functioning mobile-first product, designing the game architecture, multilingual flows, scoring, timers, interaction states, audio behavior, and QA around the pace of real group play.</p>
           <div class="project-services" aria-label="Al Majlis skills">
-            <span>Product strategy</span><span>UI/UX design</span><span>JavaScript</span><span>PWA</span><span>Game logic</span><span>Testing</span>
+            <span>Product strategy</span><span>UX/UI</span><span>JavaScript</span><span>PWA</span>
           </div>
           <div class="project-actions">
             <a class="button dark" href="https://memeeralqaddi.github.io/AlMajlis/" target="_blank" rel="noopener noreferrer">Open live app ↗</a>
@@ -111,9 +109,9 @@
         <div class="project-copy">
           <div class="project-topline"><span>02</span><span>Business brand · Service website</span></div>
           <h3>Al Hariri Detailing</h3>
-          <p>For Al Hariri Detailing, the product was the business itself. I developed the identity and customer journey together - logo, service architecture, responsive website, conversion copy, booking flow, social content, and launch creative - so the experience stayed consistent from first impression to appointment.</p>
+          <p>I built the brand and customer journey together - identity, service architecture, responsive site, conversion copy, booking flow, and launch creative - so the experience stayed consistent from first impression to appointment.</p>
           <div class="project-services" aria-label="Al Hariri Detailing skills">
-            <span>Brand identity</span><span>Logo design</span><span>Web development</span><span>Calendly</span><span>Social media</span><span>Advertising</span>
+            <span>Brand identity</span><span>Web development</span><span>Booking flow</span><span>Launch strategy</span>
           </div>
           <div class="project-actions">
             <a class="button dark" href="https://hariridetailing.com/" target="_blank" rel="noopener noreferrer">Visit website ↗</a>
@@ -131,9 +129,9 @@
         <div class="project-copy">
           <div class="project-topline"><span>03</span><span>Fitness brand · Multi-page digital platform</span></div>
           <h3>Elevate</h3>
-          <p>I built Elevate as a complete digital and brand system for a personal training and nutrition business - from the "From the Weights Up" identity through a live, responsive multi-page website. The project brought together service and program architecture, contact and inquiry flows, maps and location integrations, brand collateral, merchandise, and customer-facing touchpoints into one cohesive experience across web and physical brand assets.</p>
+          <p>I built Elevate as a complete business and digital system for a personal training and nutrition brand, spanning identity, a live multi-page website, service architecture, inquiry flows, maps, integrations, brand collateral, and merchandise.</p>
           <div class="project-services" aria-label="Elevate project skills">
-            <span>Brand strategy</span><span>UX/UI design</span><span>Multi-page web development</span><span>Integrations</span><span>Contact flows</span><span>Merchandise</span>
+            <span>Brand strategy</span><span>UX/UI</span><span>Multi-page web</span><span>Integrations</span>
           </div>
           <div class="project-actions">
             <a class="button dark" href="assets/elevate-brand-board.png" target="_blank" rel="noopener noreferrer">View project board ↗</a>
@@ -142,39 +140,39 @@
       </article>
     </section>
 
-    <section class="profile section" id="about" aria-labelledby="about-title">
-      <div class="profile-image-wrap">
-        <img src="https://raw.githubusercontent.com/MemeerAlqaddi/My-Website/main/images/Snapchat-1263686572.jpg" width="310" height="310" loading="lazy" decoding="async" alt="Portrait of Merwa AlQaddi">
-      </div>
-      <div class="profile-copy">
-        <p class="section-label">About me</p>
-        <h2 id="about-title">I work where design, systems, and business meet.</h2>
-        <p>My work sits at the intersection of UX architecture, digital product development, Salesforce, cloud systems, and business strategy. I am most useful when a problem cannot be solved by one discipline alone.</p>
-        <p>I like understanding the whole system - what the user is trying to do, what the business needs to happen, what the technology has to support, and where friction appears between those layers. From there, I can move from concept and architecture into interface, implementation, integration, testing, and refinement.</p>
-        <a class="text-link" href="https://memeeralqaddi.github.io/My-Resume/" target="_blank" rel="noopener noreferrer">View my resume →</a>
-      </div>
-    </section>
-
-    <section class="skills section" id="skills" aria-labelledby="skills-title">
-      <div class="section-heading">
-        <div>
-          <p class="section-label">Capabilities</p>
-          <h2 id="skills-title">Different disciplines. One system.</h2>
+    <section class="about-section section" id="about" aria-labelledby="about-title">
+      <div class="about-top">
+        <div class="profile-image-wrap">
+          <img src="https://raw.githubusercontent.com/MemeerAlqaddi/My-Website/main/images/Snapchat-1263686572.jpg" width="310" height="310" loading="lazy" decoding="async" alt="Portrait of Merwa AlQaddi">
+        </div>
+        <div class="profile-copy">
+          <p class="section-label">About</p>
+          <h2 id="about-title">I work where design, systems, and business meet.</h2>
+          <p>My work sits at the intersection of UX architecture, digital product development, Salesforce, cloud systems, and business strategy. I am most useful when a problem cannot be solved by one discipline alone.</p>
+          <p>I like understanding the whole system - what the user is trying to do, what the business needs, what the technology has to support, and where friction appears between those layers.</p>
+          <a class="text-link" href="https://memeeralqaddi.github.io/My-Resume/" target="_blank" rel="noopener noreferrer">View my resume →</a>
         </div>
       </div>
-      <div class="skill-grid">
-        <article><span>01</span><h3>Experience Architecture</h3><p>UX/UI architecture, design systems, user journeys, information architecture, high-fidelity prototyping, Figma, Adobe XD, and usability refinement.</p></article>
-        <article><span>02</span><h3>Product & Development</h3><p>Digital product strategy, responsive web development, JavaScript, Node.js, Python scripting, APIs, AI-augmented prototyping, QA, and iterative delivery.</p></article>
-        <article><span>03</span><h3>Cloud & Platforms</h3><p>Salesforce custom apps, declarative automation, CRM workflows, Flow Builder, AWS infrastructure, cloud workloads, and enterprise systems integration.</p></article>
-        <article><span>04</span><h3>Strategy & Systems</h3><p>Technical scoping, digital product management, business strategy, workflow design, stakeholder alignment, and Agile/Scrum delivery.</p></article>
+
+      <div class="capabilities" id="skills" aria-labelledby="skills-title">
+        <div class="capabilities-heading">
+          <p class="section-label">Capabilities</p>
+          <h2 id="skills-title">Four disciplines. One system.</h2>
+        </div>
+        <div class="capabilities-list">
+          <article><span>01</span><h3>Experience Architecture</h3><p>UX/UI architecture, design systems, user journeys, information architecture, prototyping, and usability refinement.</p></article>
+          <article><span>02</span><h3>Product & Development</h3><p>Digital product strategy, responsive web development, JavaScript, Node.js, Python, APIs, QA, and AI-assisted prototyping.</p></article>
+          <article><span>03</span><h3>Cloud & Platforms</h3><p>Salesforce custom apps, CRM workflows, Flow Builder, AWS infrastructure, cloud workloads, and enterprise integrations.</p></article>
+          <article><span>04</span><h3>Strategy & Systems</h3><p>Technical scoping, product management, workflow design, stakeholder alignment, and Agile delivery.</p></article>
+        </div>
       </div>
     </section>
 
-    <section class="experience section" id="experience" aria-labelledby="experience-title">
+<section class="experience section" id="experience" aria-labelledby="experience-title">
       <div class="section-heading">
         <div>
           <p class="section-label">Experience</p>
-          <h2 id="experience-title">Built across different kinds of complexity.</h2>
+          <h2 id="experience-title">Experience across systems, product, and cloud.</h2>
         </div>
       </div>
       <div class="timeline">
@@ -208,7 +206,7 @@
           <input type="hidden" name="_subject" value="New portfolio inquiry">
           <input type="hidden" name="_captcha" value="false">
           <p class="section-label">Get in touch</p>
-          <h2 id="contact-title">Have something complicated worth building?</h2>
+          <h2 id="contact-title">Have something worth building?</h2>
           <label for="contact-name">Name</label>
           <input id="contact-name" type="text" name="name" autocomplete="name" required>
           <label for="contact-email">Email</label>

@@ -23,7 +23,20 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .section-label{margin:0 0 18px;color:var(--sage-deep);font-size:.7rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase}
 
 .site-nav{position:fixed;z-index:50;top:0;left:0;right:0;height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 max(24px,calc((100vw - var(--max))/2));background:rgba(248,249,250,.82);border-bottom:1px solid rgba(128,139,139,.16);backdrop-filter:blur(14px);transition:all .28s ease}
-.site-nav.scrolled{top:14px;left:50%;right:auto;width:min(calc(100% - 32px),1000px);height:60px;padding:0 18px;transform:translateX(-50%);border:1px solid rgba(89,101,99,.18);border-radius:18px;background:rgba(248,249,250,.82);box-shadow:0 12px 32px rgba(37,47,44,.09)}
+.site-nav.scrolled{
+  top:14px;
+  left:50%;
+  right:auto;
+  width:min(calc(100% - 32px),1000px);
+  height:60px;
+  padding:0 18px;
+  transform:translateX(-50%);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:18px;
+  background:linear-gradient(135deg,rgba(47,58,55,.96),rgba(65,78,73,.96));
+  box-shadow:0 14px 34px rgba(32,40,38,.22);
+  backdrop-filter:blur(16px);
+}
 .wordmark{font-family:"Libre Caslon Display",Georgia,"Times New Roman",serif;font-size:1.28rem;letter-spacing:.035em}
 .site-nav nav{display:flex;align-items:center;gap:26px;font-size:.9rem;font-weight:600}
 .site-nav nav a{position:relative;transition:color .2s ease,opacity .2s ease}
@@ -297,5 +310,43 @@ footer{display:flex;justify-content:space-between;padding:30px max(24px,calc((10
     height:64px;
     right:12px;
     bottom:12px;
+  }
+}
+
+
+.site-nav.scrolled .wordmark,
+.site-nav.scrolled nav a{
+  color:#f7f6f2;
+}
+.site-nav.scrolled nav a:hover{
+  color:#ffffff;
+  opacity:.78;
+}
+.site-nav.scrolled nav a[data-section].active::after{
+  background:#d7cdbc;
+}
+.site-nav.scrolled .resume-link{
+  color:#fff;
+  border-color:rgba(255,255,255,.28);
+  background:rgba(255,255,255,.07);
+  box-shadow:none;
+}
+.site-nav.scrolled .resume-link:hover{
+  color:#fff!important;
+  background:rgba(255,255,255,.13);
+  border-color:rgba(255,255,255,.42);
+}
+.site-nav.scrolled .menu-button{
+  color:#fff;
+}
+
+@media(max-width:900px){
+  .site-nav.scrolled nav{
+    background:rgba(47,58,55,.98);
+    border-color:rgba(255,255,255,.10);
+    box-shadow:0 18px 36px rgba(32,40,38,.22);
+  }
+  .site-nav.scrolled nav a{
+    color:#f7f6f2;
   }
 }
